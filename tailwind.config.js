@@ -13,6 +13,7 @@ export default {
       },
       spacing: {
         '18': '4.375rem',
+        '50': '12.5rem',
       }
     },
   },
