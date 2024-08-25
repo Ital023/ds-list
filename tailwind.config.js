@@ -10,6 +10,7 @@ export default {
         primary: '#55BC04',
         secondary: '#C2C2C2',
         tertiary: '#FFFFFF',
+        quartenary: '#6F6F6F'
       },
       spacing: {
         '18': '4.375rem',

@@ -3,7 +3,7 @@ import InputPrimary from "../InputPrimary";
 
 export default function FormFilterContainer() {
   return (
-    <div className="md:max-w-[960px] md:mx-auto h-50 bg-tertiary flex justify-center content-center rounded-md p-5 md:justify-start">
+    <div className="md:max-w-[960px] md:mx-auto h-50 bg-tertiary flex justify-center content-center rounded-md p-5 md:justify-start mb-5">
 
       <form className="flex flex-col gap-3">
 
