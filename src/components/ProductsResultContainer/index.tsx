@@ -11,15 +11,13 @@ type Props = {
 export default function ProductsResultContainer({ minValue, maxValue }: Props) {
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
-  const [totalProducts, setTotalProducts] = useState<number>(0);
 
   useEffect(() => {
     const listProducts = productService.findByPrice(minValue, maxValue);
     setProducts(listProducts);
-    setTotalProducts(listProducts.length);
   }, [minValue, maxValue]);
 
-  return totalProducts > 0 ? (
+  return products.length > 0 ? (
     <div className="bg-tertiary rounded-md p-5 flex flex-col gap-3 md:max-w-[960px] md:mx-auto">
       {products.map((product) => (
         <ProductResult
