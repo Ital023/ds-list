@@ -1,15 +1,7 @@
-import FormFilterContainer from "./components/FormFilterContainer";
-import Header from "./components/Header";
-import ProductsResultContainer from "./components/ProductsResultContainer";
+import Home from "./routes/Home";
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <main className="p-4">
-        <FormFilterContainer />
-        <ProductsResultContainer />
-      </main>
-    </>
+    <Home />
   );
 }
