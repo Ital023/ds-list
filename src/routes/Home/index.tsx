@@ -8,7 +8,7 @@ export default function Home() {
       <Header />
       <main className="p-4">
         <FormFilterContainer />
-        <ProductsResultContainer minValue={0} maxValue={0}/>
+        <ProductsResultContainer minValue={0} maxValue={10000}/>
       </main>
     </>
   );
