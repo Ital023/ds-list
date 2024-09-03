@@ -5,11 +5,14 @@ import ProductResult from "../ProductResult";
 import { ContextProductsCount } from "../../utils/context-products";
 
 type Props = {
-  minValue: number;
-  maxValue: number;
+  minValue?: number;
+  maxValue?: number;
 };
 
 export default function ProductsResultContainer({ minValue, maxValue }: Props) {
+  console.log(minValue);
+  console.log(maxValue);
+  
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
   const {setContextProductsCount} = useContext(ContextProductsCount);
