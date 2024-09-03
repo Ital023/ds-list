@@ -19,7 +19,8 @@ export default function ProductsResultContainer({ minValue, maxValue }: Props) {
     const listProducts = productService.findByPrice(minValue, maxValue);
     setProducts(listProducts);
     setContextProductsCount(products.length);
-  }, [minValue, maxValue, products]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [minValue, maxValue]);
 
   return products.length > 0 ? (
     <div className="bg-tertiary rounded-md p-5 flex flex-col gap-3 md:max-w-[960px] md:mx-auto">
