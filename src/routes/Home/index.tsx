@@ -17,7 +17,7 @@ export default function Home() {
       <Header />
       <main className="p-4">
         <FormFilterContainer onFilter={handleFilter} />
-        <ProductsResultContainer minValue={formDate.minValue} maxValue={formDate.maxValue}/>
+        <ProductsResultContainer product={formDate}/>
       </main>
     </>
   );
