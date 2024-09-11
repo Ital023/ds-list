@@ -1,4 +1,4 @@
 export type FormDate = {
-    minValue?: number,
-    maxValue?: number
+    minValue: number,
+    maxValue: number
   }

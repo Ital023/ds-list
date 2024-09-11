@@ -6,7 +6,10 @@ import { FormDate } from "../../models/FormDate";
 
 export default function Home() {
 
-  const[formDate, setFormDate] = useState<FormDate>({});
+  const[formDate, setFormDate] = useState<FormDate>({
+    minValue: 0,
+    maxValue: 0
+  });
 
   function handleFilter(minValue: number, maxValue: number) {
     setFormDate({minValue: minValue, maxValue: maxValue});

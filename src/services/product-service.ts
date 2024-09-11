@@ -1,35 +1,21 @@
 import { ProductDTO } from "../models/ProductDTO";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function findByPrice(min?: any, max?: any): ProductDTO[] {
-  if(isMinValueNotNull(min) && max !== isMaxValueNotNull(max)  && max >= min){
-    console.log("Caiu no filtro");
+export function findByPrice(min: number, max: number): ProductDTO[] {
+  console.log("Valor minimo: " + min);
+  console.log("Valor maximo: "+ max);
+  
+  if(min === 0 && max === 0) return products;
     
-    return products
-    .filter((x) => x.price >= min && x.price <= max)
-    .sort((x, y) => x.price - y.price);
-  }
-
-  console.log("caiu aqui products total");
-  return products;
+  return products
+  .filter((x) => {
+    if (max === 0) {
+      return x.price > min;
+    } else {
+      return x.price >= min && x.price <= max;
+    }
+  })
+  .sort((x, y) => x.price - y.price);
 }  
-  
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isMinValueNotNull(min?: any): boolean{
-    if(min !== undefined && min !== "" && min !== null) {
-      return true;
-    } 
-    return false;
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function isMaxValueNotNull(max?: any): boolean{
-  if(max !== undefined && max !== "" && max !== null) {
-    return true;
-  } 
-  return false;
-}
-  
 
 const products: ProductDTO[] = [
     {

@@ -8,7 +8,10 @@ type Props = {
 
 export default function FormFilterContainer({onFilter}: Props) {
 
-  const[formDate, setFormDate] = useState<FormDate>({});
+  const[formDate, setFormDate] = useState<FormDate>({
+    minValue: 0,
+    maxValue: 0
+  });
 
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

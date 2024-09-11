@@ -10,8 +10,6 @@ type Props = {
 };
 
 export default function ProductsResultContainer({product}: Props) {
-  console.log(product.minValue);
-  console.log(product.maxValue);
   
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
